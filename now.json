@@ -1,0 +1,20 @@
+{
+  "name": "rnb-gql-api",
+  "version": 2,
+  "env": {
+    "MONGO_URI": "@mongouri"
+  },
+  "alias": "rnb-gql-api",
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/graphql",
+      "dest": "src/index.js"
+    }
+  ]
+}
